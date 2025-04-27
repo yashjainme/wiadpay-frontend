@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Make sure to install axios: npm install axios
-import { InputBox, Button, Heading, SubHeading, BottomWarning, } from './uiComponents'; // Adjust path if needed
+import axios from 'axios'; 
+import { InputBox, Button, Heading, SubHeading, BottomWarning, } from './uiComponents'; 
 
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
@@ -30,8 +30,7 @@ export default function Signin() {
                 password
             });
             localStorage.setItem("token", response.data.token);
-             // Fetch user details after signin to get name for AppBar (optional)
-             // You might want to fetch user details here or rely on info from signup
+         
             navigate("/dashboard");
         } catch (err) {
             setError(err.response?.data?.message || "Signin failed. Check credentials.");

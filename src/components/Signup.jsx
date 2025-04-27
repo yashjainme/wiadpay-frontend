@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Make sure to install axios: npm install axios
-import { InputBox, Button, Heading, SubHeading, BottomWarning } from './uiComponents'; // Adjust path if needed
+import axios from 'axios'; 
+import { InputBox, Button, Heading, SubHeading, BottomWarning } from './uiComponents'; 
 
 
 
@@ -30,7 +30,7 @@ export default function Signup() {
             });
             localStorage.setItem("token", response.data.token); // Store token
             
-            navigate("/dashboard"); // Redirect to dashboard
+            navigate("/dashboard"); 
         } catch (err) {
             setError(err.response?.data?.message || "Signup failed. Please try again.");
             console.error("Signup error:", err);

@@ -67,7 +67,7 @@ export function BottomWarning({ label, buttonText, to, navigate }) {
 
 // App Bar Component (for Dashboard)
 export function AppBar({ userFirstName }) {
-    const navigate = useNavigate(); // Assuming useNavigate is available via context or props if needed elsewhere
+    const navigate = useNavigate(); 
 
     const handleLogout = () => {
         localStorage.removeItem("token"); // Clear token
